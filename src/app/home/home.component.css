@@ -1,0 +1,16 @@
+.homecontainer{
+        display: block;
+        width: 100%;
+        height: 100%;
+        /* border: 2px solid black; */
+        /* background-color: aqua; */
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative;
+       
+}
+ p{
+     margin: 0;
+     padding: 0;
+ }
+

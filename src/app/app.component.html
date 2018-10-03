@@ -1,5 +1,13 @@
-<div class="logo1">
-    <img src="../assets/logo1.png"  width="20%" height="100%" style="margin-left: 2%"/>
+<div class="logo1" [ngClass]="{'page-scroll-header': isScrolled}">
+    <img src="../assets/logo1.png" width="20%" height="100%" style="margin-left: 2%" />
 </div>
-<router-outlet></router-outlet>
+<div class="abc">
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
 
+
+<div class="footer" [ngClass]="{'page-scroll-header1': isScrolled1}">
+
+</div>
