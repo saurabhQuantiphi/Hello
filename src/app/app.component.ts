@@ -25,25 +25,17 @@ export class AppComponent {
     this.currPos = (window.pageYOffset || evt.target.scrollTop) - (evt.target.clientTop || 0);
     if (this.currPos >= this.changePos) {
       console.log("is scrolled is set to true" + this.currPos);
-
-
-
-      if (this.currPos >= 20) {
+      if (this.currPos >= 40) {
         this.isScrolled = true;
         this.isScrolled1 = true;
 
       } else {
-
+        this.isScrolled=false;
       }
-
-
-
     } else {
       console.log("is scrolled is set to false");
       this.isScrolled = false;
       this.isScrolled1 =false;
-
-
     }
   }
 
