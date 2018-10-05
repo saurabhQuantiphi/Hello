@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import{Router} from '@angular/router'
 declare const gapi: any;
+import { Component, OnInit, NgZone } from '@angular/core';
+import { Router } from '@angular/router'
+
 
 @Component({
   templateUrl: './login.component.html',
@@ -8,8 +9,7 @@ declare const gapi: any;
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
-
+  constructor(private router: Router, private zone: NgZone) { }
   ngOnInit() {
   }
   public auth2: any;
@@ -33,18 +33,22 @@ export class LoginComponent implements OnInit {
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail());
-      
-        this.router.navigate(['Home']);
+     
+        this.zone.run(() => {
+          this.router.navigate(['Home']);
+
+        });
       }, (error) => {
         alert(JSON.stringify(error, undefined, 2));
       });
+
+
   }
 
-ngAfterViewInit(){
-      this.googleInit();
+  ngAfterViewInit() {
+    this.googleInit();
+  }
+
 }
 
-  // changeme(){
-  //   this.router.navigate(['/Home']);
-  // }
-}
+

@@ -1,11 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    outline: 0;
-    height: 100%;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  outline: 0;
+  height: 100%;
 }
-body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.9) !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
